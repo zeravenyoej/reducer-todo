@@ -1,13 +1,9 @@
-import React, { useReducer } from 'react';
-import { reducer, initialState } from '../reducers/reducer';
+import React from 'react';
 
-const Display = () => {
-
-    const [todoState, dispatch] = useReducer(reducer, initialState );
-
+const Display = (props) => {
     return (
         <div>
-            <h3>{todoState.item}</h3>
+            <h3>{props.task.item}</h3>
         </div>
     )
 };
