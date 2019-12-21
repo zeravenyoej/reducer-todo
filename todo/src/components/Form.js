@@ -3,26 +3,23 @@ import React, { useState } from 'react';
 const Form = (props) => {
     const [formValues, setFormValues] = useState('');
 
+    const handleChange = (e) => {
+        setFormValues(e.target.value);
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
         props.dispatch( {type: 'ADD_TODO', payload: formValues })
         setFormValues('');
     };
 
-    const handleChange = (e) => {
-        e.preventDefault();
-        // dispatch( {type: 'ADD_TODO', payload: formValues })
-        setFormValues(e.target.value);
-    };
-
-
     return(
         <div>
             <form onSubmit={handleSubmit}>
                     <input
                         type='text'
-                        name='item'
-                        placeholder='...to do'
+                        name='formValue'
+                        placeholder='enter To DO'
                         value={formValues}
                         onChange={handleChange}
                     />
