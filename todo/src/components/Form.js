@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 
-const Form = () => {
+const Form = (props) => {
     const [formValues, setFormValues] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        props.dispatch( {type: 'ADD_TODO', payload: formValues })
         setFormValues('');
     };
 
     const handleChange = (e) => {
+        e.preventDefault();
+        // dispatch( {type: 'ADD_TODO', payload: formValues })
         setFormValues(e.target.value);
     };
 
@@ -25,6 +28,8 @@ const Form = () => {
                     />
                 <button>Add To Do</button>
             </form>
+                &nbsp;
+                <button>Clear Selected</button>
         </div>
     )
 };

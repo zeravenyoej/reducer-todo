@@ -1,16 +1,17 @@
 import React, { useState, useReducer } from 'react';
 import Display from './Display';
-import { reducer, initialState } from '../reducers/reducer';
 
 
-const TodoList = () => {
-    const [todoState, dispatch] = useReducer(reducer, initialState);
-
+const TodoList = (props) => {
+    console.log('todolist: ', props)
     return (
         <div>
-            <Display
-            task={todoState}
-            />
+            {props.todoState.map((task)=>{
+                return <Display
+                    key={task.id}
+                    task={task}
+                />
+            })}
         </div>
     )
 };
