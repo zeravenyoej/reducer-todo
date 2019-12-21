@@ -13,6 +13,11 @@ export const reducer = (state, action) => {
                 completed: false,
                 id: new Date()},
             ];
+        case "TOGGLE_ITEM":
+            return [
+                ...state, 
+                {completed: true}
+            ];
         default: 
             return state;
     }

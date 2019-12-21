@@ -1,15 +1,15 @@
-import React, { useState, useReducer } from 'react';
+import React from 'react';
 import Display from './Display';
 
 
 const TodoList = (props) => {
-    console.log('todolist: ', props)
     return (
         <div>
-            {props.todoState.map((task)=>{
+            {props.todoState.map((task, index)=>{
                 return <Display
-                    key={task.id}
+                    key={index}
                     task={task}
+                    toggleItem={props.toggleItem}
                 />
             })}
         </div>

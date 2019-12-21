@@ -1,3 +1,8 @@
 .App {
   text-align: center;
 }
+
+.toggled {
+  text-decoration: line-through;
+  font-weight: 100;
+}

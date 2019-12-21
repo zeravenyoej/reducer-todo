@@ -13,8 +13,10 @@ function App() {
   };
 
   //goes to LIST
-  const toggleItem = () => {
-
+  const toggleItem = (e) => {
+    e.preventDefault();
+    dispatch({ type: "TOGGLE_ITEM" });
+    e.target.classList.add('toggled');
   };
 
 
