@@ -1,5 +1,18 @@
+body {
+  background: rgb(194, 194, 240);
+}
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  padding: 3%;
+  margin: 10% auto;
+  border: 2px solid black;
+  background: white;
+  width: 20%;
+  height: auto;
 }
 
 .toggled {

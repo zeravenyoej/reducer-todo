@@ -23,8 +23,10 @@ const Form = (props) => {
                         value={formValues}
                         onChange={handleChange}
                     />
+                    &nbsp; &nbsp; &nbsp;
                 <button>Add To Do</button>
             </form>
+                <br/>
                 &nbsp;
                 <button>Clear Selected</button>
         </div>
