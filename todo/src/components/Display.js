@@ -5,13 +5,13 @@ const Display = ({task, dispatch}) => {
 
     const toggleItem = (e) => {
         e.preventDefault();
-        dispatch({ type: "TOGGLE_ITEM", payload: task.id})
+        dispatch({ type: "TOGGLE_ITEM", payload: task.id })
     }
 
     console.log(task)
     return (
         <div>
-            <h3 onClick={toggleItem} className={task.completed === false ? null: 'toggled'}>
+            <h3 onClick={toggleItem} className={!task.completed ? null: 'toggled'}>
                 {task.item}
             </h3>
         </div>
