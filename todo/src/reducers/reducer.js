@@ -2,7 +2,7 @@ export const initialState = [
     {
         item: 'Learn about reducers',
         completed: false,
-        id: new Date()
+        id: Date()
     }, 
     {
         item: 'Go to sleep',
@@ -17,8 +17,9 @@ export const reducer = (state, action) => {
             const newTodo = {
                 item: action.payload,
                 completed: false,
-                item: new Date()
+                id: Date.now()
             };
+            console.log('reducer: ', state, newTodo)
             return [...state, newTodo];
         case "TOGGLE_ITEM":
             return state.map(item=>{
@@ -36,24 +37,3 @@ export const reducer = (state, action) => {
             return state;
     }
 };
-
-
-//   export const reducer = (state, action) => {
-//     console.log(state, action);
-//     switch (action.type) {
-//       case 'UPDATE_TITLE':
-//         return {
-//           ...state,
-//           title: action.payload
-//         };
-//       // NEW CASE HERE
-//       case 'TOGGLE_EDIT':
-//         return {
-//           ...state,
-//           editing: !state.editing
-//         };
-//       default:
-//         return state;
-//     }
-//   };
-  

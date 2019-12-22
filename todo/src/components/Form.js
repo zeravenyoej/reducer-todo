@@ -17,13 +17,13 @@ const Form = (props) => {
         e.preventDefault();
         props.dispatch({ type: "CLEAR_ITEMS" })
     }
-
+    console.log('FORM: ', formValues)
     return(
         <div>
             <form onSubmit={handleSubmit}>
                     <input
                         type='text'
-                        name='formValue'
+                        name='formValues'
                         placeholder='enter To DO'
                         value={formValues}
                         onChange={handleChange}
