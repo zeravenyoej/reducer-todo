@@ -23,7 +23,7 @@ export const reducer = (state, action) => {
         case "TOGGLE_ITEM":
             return state.map(item=>{
                 if(item.id === action.payload){
-                    return {...item, completed: true}
+                    return {...item, completed: !item.completed}
                 } else {
                     return item
                 }

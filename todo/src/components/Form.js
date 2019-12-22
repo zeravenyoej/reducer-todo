@@ -9,7 +9,7 @@ const Form = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        props.dispatch( {type: 'ADD_TODO', payload: formValues })
+        props.dispatch({ type: 'ADD_TODO', payload: formValues })
         setFormValues('');
     };
 
