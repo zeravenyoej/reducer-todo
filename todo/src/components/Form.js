@@ -13,6 +13,11 @@ const Form = (props) => {
         setFormValues('');
     };
 
+    const clearItems = (e) => {
+        e.preventDefault();
+        props.dispatch({ type: "CLEAR_ITEMS" })
+    }
+
     return(
         <div>
             <form onSubmit={handleSubmit}>
@@ -28,7 +33,7 @@ const Form = (props) => {
             </form>
                 <br/>
                 &nbsp;
-                <button>Clear Selected</button>
+                <button onClick={clearItems}>Clear Selected</button>
         </div>
     )
 };

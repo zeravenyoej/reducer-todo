@@ -3,13 +3,14 @@ import Display from './Display';
 
 
 const TodoList = (props) => {
+
     return (
         <div>
             {props.todoState.map((task, index)=>{
                 return <Display
                     key={index}
                     task={task}
-                    toggleItem={props.toggleItem}
+                    dispatch={props.dispatch}
                 />
             })}
         </div>
