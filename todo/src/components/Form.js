@@ -24,7 +24,7 @@ const Form = (props) => {
                     <input
                         type='text'
                         name='formValues'
-                        placeholder='enter To DO'
+                        placeholder='enter To Do'
                         value={formValues}
                         onChange={handleChange}
                     />

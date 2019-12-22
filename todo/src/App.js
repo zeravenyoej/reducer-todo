@@ -11,13 +11,15 @@ function App() {
   return (
     <div className="App">
       <h1>TO DO LIST</h1>
-      <Form
-        dispatch={dispatch}
-      />
-      <TodoList
-        dispatch={dispatch}
-        todoState={todoState}
-      />
+      <div id='insideDiv'>
+        <Form
+          dispatch={dispatch}
+        />
+        <TodoList
+          dispatch={dispatch}
+          todoState={todoState}
+        />
+        </div>
     </div>
   );
 }
