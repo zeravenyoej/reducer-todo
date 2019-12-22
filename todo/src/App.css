@@ -19,3 +19,18 @@ body {
   text-decoration: line-through;
   font-weight: 100;
 }
+
+input {
+  border: 1px solid grey;
+  padding: 2%;
+}
+
+button {
+  border-radius: 20px;
+  font-weight: 400;
+  font-size: .9rem;
+}
+
+#clearbttn {
+  background: rgb(246, 246, 146);
+}

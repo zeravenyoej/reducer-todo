@@ -33,7 +33,7 @@ const Form = (props) => {
             </form>
                 <br/>
                 &nbsp;
-                <button onClick={clearItems}>Clear Selected</button>
+                <button id={'clearbttn'} onClick={clearItems}>Clear Selected</button>
         </div>
     )
 };
