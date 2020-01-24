@@ -1,14 +1,9 @@
 export const initialState = [
     {
-        item: 'Learn about reducers',
+        item: 'First todo',
         completed: false,
         id: Date()
     }, 
-    {
-        item: 'Go to sleep',
-        completed: false, 
-        id: new Date()
-    }
 ];
 
 export const reducer = (state, action) => {
